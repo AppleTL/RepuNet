@@ -1,6 +1,6 @@
 # RepuNet: Building A Networked Reputation System for LLM-based Multi-agent Systems
 
-![](C:\Users\lenovo\Desktop\game_theory\graduation_project\paper\figure\framework.png)
+![](images/framework.png)
 
 
 
@@ -8,7 +8,7 @@ In this paper, We propose a novel framework named *RepuNet*, a dynamic, dual-lev
 
 ## Code Guidance
 
-![](C:\Users\lenovo\Desktop\game_theory\graduation_project\paper\figure\code_guidance\code_guidance.png)
+![](images/code_guidance.png)
 
 ## Requirements
 
