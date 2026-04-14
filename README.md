@@ -4,7 +4,7 @@
 
 
 
-In this paper, We propose a novel framework named *RepuNet*, a dynamic, dual-level reputation system designed to address the collapse of cooperation in multi-agent systems driven by large language models. This repository includes the complete simulation environment for modeling both agent-level reputation dynamics (via direct interactions and gossip) and system-level network evolution. We offer instructions for setting up the simulation environment on your local machine and reproducing the three distinct interaction scenarios evaluated in our study. 
+We propose a novel framework named *RepuNet*, a dynamic, dual-level reputation system designed to address the collapse of cooperation in multi-agent systems driven by large language models. This repository includes the complete simulation environment for modeling both agent-level reputation dynamics (via direct interactions and gossip) and system-level network evolution. We offer instructions for setting up the simulation environment on your local machine and reproducing the three distinct interaction scenarios evaluated in our study. 
 
 ## Code Guidance
 
