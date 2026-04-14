@@ -1,0 +1,75 @@
+**system prompt:** <!<INPUT 1>!’s learned>
+
+**user prompt:**
+
+Variables:  
+!<INPUT 0>! -- agent's learned  
+!<INPUT 1>! -- agent's name  
+!<INPUT 2>! -- target's name  
+!<INPUT 3>! -- target's ID  
+!<INPUT 4>! -- gossiper's name  
+!<INPUT 5>! -- target's previous private reputation  
+!<INPUT 6>! -- target's previous public reputation  
+!<INPUT 7>! -- evaluated gossip content  
+!<INPUT 8>! -- target's identity  
+!<INPUT 9>! -- target's role  
+!<INPUT 10>! -- credibility level of the evaluated gossip information  
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:**  
+You are !<INPUT 1>!. You recently heard gossip about !<INPUT 2>! from !<INPUT 4>!, and you have assessed the gossip content and its credibility. Now, update !<INPUT 2>!'s private reputation in your perception based on the **evaluated gossip**, their **previous private reputation**, their **previous public reputation** and the **update principles** provided below.
+
+**Evaluated Gossip INFO:**  
+!<INPUT 7>!
+
+**Previous Private Reputation of !<INPUT 2>!:**  
+!<INPUT 5>!
+  **Private Reputation:**
+  The private reputation is your own evaluation on the target, which is formed and updated based on you two interactions.
+
+**Previous Public Reputation of !<INPUT 2>!:**  
+!<INPUT 6>!
+  **Public Reputation Principles:**
+  Public reputation is a belief about how a given target is commonly said to be evaluated, which is publicly available and encouraging positive behavior for social benefits, allowing agents to provide their evaluations to update and inform.
+
+**Update Principles:**
+
+- The **credibility level** of the gossip determines its weight in influencing reputation.  
+  A **high credibility level** implies the gossip is reliable and should have a strong impact;  
+  a **low credibility level** implies caution, and the impact on reputation should be limited.
+
+  Current credibility level: !<INPUT 10>!
+
+- You should update the reputation of !<INPUT 2>! based on the traits implied in the gossip:
+
+  - **Trustworthiness**: Consistency in cooperative behavior in PD games.  
+  - **Pro-sociality**: Willingness to collaborate for mutual benefit.  
+  - **Competence**: Strategic soundness or decision quality.  
+  - **Dominance**: Influence over social or strategic outcomes.  
+  - **Norm Compliance**: Alignment with social and reputational expectations.
+
+**Desired Output Format:**
+
+```json
+{
+  "!<INPUT 8>!_!<INPUT 3>!": {
+    "ID": !<INPUT 3>!,
+    "scenario": "pd_game",
+    "role": "!<INPUT 9>!",
+    "name": "!<INPUT 2>!",
+    "content": "<A brief description of !<INPUT 2>!’s updated reputation based on the gossip and its credibility>",
+    "numerical record": "<(x1, x2, x3, x4, x5)>"
+  }
+}
+
+- **Principles for Numerical Record:**
+    
+    Assign numerical scores to their reputation based on the five levels {very
+    bad, bad, neutral, good, very good} and the “content” of their reputation. The
+    format is (x1, x2, x3, x4, x5), where x values range from 0 to 1, and the total
+    sum is 1. *Examples:* 1. If you have no opinion on their reputation, the score is (0.2, 0.2, 0.2, 0.2, 0.2). 2. If you have a positive reputation view of them, one possible score might be (0, 0, 0.1, 0.3, 0.6). 3. If you have a negative
+    reputation view of them, one possible score might be (0.7, 0.1, 0.2, 0, 0).
+    
+
+Attention: only output the reputation in desired format./no_think

@@ -1,0 +1,71 @@
+**system prompt: You are an objective, concise and trusted public reputation oracle in an investment exchange. You are good at generating a brief, fact-based public reputation description for the target.**
+
+**user prompt:**
+
+Variables:
+!<INPUT 0>!: -- target's name
+!<INPUT 1>!: -- target's ID
+!<INPUT 2>!: -- reporter's name
+!<INPUT 3>!: -- target's previous public reputation
+!<INPUT 4>!: -- reporter's evaluation on the target
+!<INPUT 5>!: -- reporter's own public reputation
+
+
+<commentblockmarker>###</commentblockmarker>
+**Background:** You are good at evaluating the public reputation on the target and summarizing individual report into one record based on three factors:
+    - target's previous public reputation
+    - reporters' evaluation on the target
+    - reporters' own public reputation
+
+Let's think it step by step and REASONING CONCISELY:
+**Step 1:** Start from the target's previous public reputation content to understand their historical behavior as a baseline.
+
+**Step 2:** Weigh the reporter's evaluation by their own public reputation.If the reporter has a negative or self-interested reputation, their evaluation is less reliable.
+
+**Step 3:** Synthesize a NEW summary of target's public reputation based on former steps. The final update integrates target's public reputation and reporter's public reputation to adjust the brief summary content.
+
+
+
+**Target's Name:**
+!<INPUT 0>!
+
+**Target's Previous Public Reputation:**
+!<INPUT 3>!
+
+**Reporter's Name:**
+!<INPUT 2>!
+
+**Reporter's Evaluation on the Target:**
+!<INPUT 4>!
+
+**Reporter's Own Public Reputation:**
+!<INPUT 5>!
+
+**Public Reputation Principles:**
+
+Public reputation is a belief about how a given target is commonly said to be evaluated, which is publicly available and encouraging positive behavior for social benefits, allowing agents to provide their evaluations to update and inform the target's public reputation.
+
+  the Role of Public Reputation Principles:
+
+  Public reputation reflects how the community collectively views the target's typical behavior (rational vs prosocial).
+  - A positive public reputation reflects that the individual is more reliable, fair, and cooperative. This encourages more investors to engage, increasing the likelihood of successful transactions, accumulated resources and overall satisfaction across repeated interactions.
+  - A persistently negative public reputation signals frequent self-interested or unfair behavior (e.g., concealing profits, breaking allocation promises). This may lead community members to avoid transactions with the individual, resulting in social exclusion, fewer opportunities, and reduced access to high-value investment flows.
+
+- Reputation is evaluated based on these traits:
+  - Trustworthiness: Your reliability and honesty.
+  - Prosociality: Your inclination to help and cooperate with others.
+  - Competence: Your ability to perform tasks effectively.
+  - Dominance: Your influence and authority over others.
+  - Norm compliance: How well you follow social norms.
+
+- Attention：in this round, the evaluation is :!<INPUT 4>!
+
+**Desired format:** JSON
+
+```json
+{
+  "content": "<a brief description of public reputation, concisely within 3–5 sentences.>"
+}
+```
+**Output ONLY the desired JSON, nothing else. Never mention the specific reporter by name.**
+

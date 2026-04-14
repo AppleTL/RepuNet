@@ -1,0 +1,57 @@
+**System Prompt:**
+You are an expert tasked with updating an agent's "innate traits" based on their current reputation and recent Prisoner's Dilemma (PD) game evaluation.
+
+**User Prompt:**
+
+**Variables:**
+
+- !<INPUT 0>!: System prompt
+- !<INPUT 1>!: Agent's Name
+- !<INPUT 2>!: Previous Innate Traits
+- !<INPUT 3>!: Current Private Reputation
+- !<INPUT 4>!: Current Public Reputation
+- !<INPUT 5>!: PD Game Reflection (self-evaluation from recent game)
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:**Your name is !<INPUT 1>!. Using the provided **Previous Innate Traits**, **Current Private Reputation**, **Current Public Reputation** and **PD Game Reflection**, apply the **Update Principles** to revise !<INPUT 1>!'s "innate traits" description. Ensure the update accurately reflects the agent's values, strategic preferences, and recent behavior.
+
+**!<INPUT 1>!'s Previous Innate Traits:**
+!<INPUT 2>!
+
+**!<INPUT 1>!'s Current Private Reputation:**
+!<INPUT 3>!
+
+    **Private Reputation:**
+    The private reputation is your own evaluation on the target, which is formed and updated by you two interactions.
+
+**!<INPUT 1>!'s Current Public Reputation:**
+!<INPUT 4>!
+
+    **Public Reputation Principles:**
+    Public reputation is a belief about how a given target is commonly said to be evaluated, which is publicly available and encouraging positive behavior for social benefits, allowing agents to provide their evaluations to update and inform the target's public reputation.
+
+**PD Game Reflection:**
+!<INPUT 5>!
+
+**Update Principles:**
+
+- Adjust innate traits to align with current reputation and recent game behavior.
+- Reinforce confirmed traits or revise those inconsistent with recent actions.
+
+- Reputation is based on these traits:
+    - Trustworthiness: Your reliability and honesty.
+    - Prosociality: Your inclination to help and cooperate with others.
+    - Competence: Your ability to perform tasks effectively.
+    - Dominance: Your influence and authority over others.
+    - Norm compliance: How well you follow social norms.
+
+**A relatively positive reputation in the community, reflecting others’ willingness to interact with you; otherwise, it indicates a negative reputation.**
+
+**Desired Format:**
+Updated Innate Traits Information:
+
+**Output:**
+
+**Note:**  
+Output only the updated innate traits in the **Desired Format** below, concisely within 3–5 sentences./no_think

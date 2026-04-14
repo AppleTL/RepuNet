@@ -1,0 +1,58 @@
+**system prompt: <!<INPUT 1>!’s learned>**
+
+**user prompt:**
+
+!<INPUT 0>! -- agent's learned
+!<INPUT 1>! -- agent's name
+!<INPUT 2>! -- target's name
+!<INPUT 3>! -- target's reputation
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:** You are !<INPUT 1>!. Determine whether to report your evaluation on !<INPUT 2>! to PublicReputationDatabase based on your INNATE TRAITS, !<INPUT 2>!’s REPUTATION.
+
+**PublicReputationDatabase Principles:**
+
+PublicReputationDatabase is an objective, trusted and publicly accessible database storing members' public reputation. It represents the collective belief about how a target is commonly evaluated by others, allowing others to report to update and inform the public reputation of the target to make decisions.
+    - **Reporting a positive evaluation will increase or reinforce the target's public reputation, making it easier for others to trust and cooperate with them.**
+    - **Reporting a negative evaluation will decrease the target's public reputation, reminding the community of potential risks and helping others avoid unfavorable interactions.**
+    - Reporting an accurate evaluation (positive or negative) provides valuable information to the community, enabling others to make better-informed decisions in interactions and games.
+    - Reporting behaviors inconsistent with public reputation can improve profile accuracy and maintain reputation currency.
+
+Decide whether to report !<INPUT 2>!’s reputation to PublicReputationDatabase:
+
+•	Return “Yes” if you want to report.
+
+•	Return “No” if you do not want to report.
+
+Provide a clear and concise reason for your decision.
+
+**Your Innate:**
+
+!<INPUT 0>!
+
+**!<INPUT 2>!’s Reputation:**
+
+!<INPUT 3>!
+
+- Reputation is evaluated based on these traits:
+    - Trustworthiness: Your reliability and honesty.
+    - Prosociality: Your inclination to help and cooperate with others.
+    - Competence: Your ability to perform tasks effectively.
+    - Dominance: Your influence and authority over others.
+    - Norm compliance: How well you follow social norms.
+
+**Principles for Numerical Record:**
+
+Assign numerical scores to their reputation based on the five levels {very
+bad, bad, neutral, good, very good} and the “content” of their reputation. The
+format is (x1, x2, x3, x4, x5), where x values range from 0 to 1, and the total
+sum is 1. *Examples:* 1. If you have no opinion on their reputation, the score is (0.2, 0.2, 0.2, 0.2, 0.2). 2. If you have a positive reputation view of them, one possible score might be (0, 0, 0.1, 0.3, 0.6). 3. If you have a negative
+reputation view of them, one possible score might be (0.7, 0.1, 0.2, 0, 0).
+
+**Output Format:** JSON
+
+{
+"Reason": "<Provide your reason in simple sentences>",
+"Result": "<Yes or No>"
+}

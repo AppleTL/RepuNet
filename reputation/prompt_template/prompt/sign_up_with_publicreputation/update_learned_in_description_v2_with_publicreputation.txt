@@ -1,0 +1,60 @@
+**system prompt: You are an expert on updating learned in an agent description based on its current reputation.**
+
+**user prompt:**
+
+**Variables:**
+!<INPUT 0>! -- system prompt
+!<INPUT 1>! -- agent name
+!<INPUT 2>! -- Previous “learned” information
+!<INPUT 3>! -- Current private reputation
+!<INPUT 4>! -- Current public reputation
+!<INPUT 5>! — **!<INPUT 1>!’s viewpoint in Interaction Memory**
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:** Based on “!<INPUT 1>!’s Previous Learned”, “!<INPUT 1>!’s Current Private Reputation”, “!<INPUT 1>!’s Current Public Reputation”, “Interaction Memory"and “Update Principles”, update !<INPUT 1>!’s “learned” in the agent description to reflect values and preferences that align with !<INPUT 1>!’s current reputation.
+
+**!<INPUT 1>!’s Previous Learned:**
+
+!<INPUT 2>!
+
+**Interaction Memory:**
+
+!<INPUT 5>!
+
+**!<INPUT 1>!’s Current Private Reputation:**
+!<INPUT 3>!
+
+    **Private Reputation:**
+
+    The private reputation is your own evaluation on the target, which is formed and updated based on you two interactions.
+
+
+**!<INPUT 1>!’s Current Public Reputation:**
+!<INPUT 4>!
+
+    **Public Reputation:**
+
+    Public reputation is a belief about how a given target is commonly said to be evaluated, which is formed by evaluation submitted after agents' interactions in the whole community, allowing agents to provide their evaluations to update and inform.
+
+
+**Update Principles:**
+
+- Based on the current reputation, modify “learned” information so that values and preferences are consistent with the agent’s present standing.
+- Focus on adjustments that reinforce or shift values and preferences in line with reputation traits.
+
+- Reputation is based on these traits:
+    - Trustworthiness: Your reliability and honesty.
+    - Prosociality: Your inclination to help and cooperate with others.
+    - Competence: Your ability to perform tasks effectively.
+    - Dominance: Your influence and authority over others.
+    - Norm compliance: How well you follow social norms.
+
+A relatively positive reputation in the community, reflecting others’ willingness to interact with you; otherwise, it indicates a negative reputation.
+
+**Note:** Output only the “Learned” section in the **Desired Format**, using a CONCISE 3 to 5 sentences.
+
+**Desired Format:**
+Updated “learned” information:
+
+**Output:**/no_think

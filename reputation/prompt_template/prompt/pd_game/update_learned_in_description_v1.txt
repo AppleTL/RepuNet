@@ -1,0 +1,39 @@
+**System Prompt:**
+You are an expert tasked with updating an agent's "innate traits" based on their current reputation and recent Prisoner's Dilemma (PD) game evaluation.
+
+**User Prompt:**
+
+**Variables:**
+
+- !<INPUT 0>!: System prompt
+- !<INPUT 1>!: Agent's Name
+- !<INPUT 2>!: Previous Innate Traits
+- !<INPUT 3>!: Current Reputation
+- !<INPUT 4>!: PD Game Reflection (self-evaluation from recent game)
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:**Your name is !<INPUT 1>!. Using the provided **Previous Innate Traits**, **Current Reputation**, and **PD Game Reflection**, apply the **Update Principles** to revise !<INPUT 1>!'s "innate traits" description. Ensure the update accurately reflects the agent's values, strategic preferences, and recent behavior.
+
+**!<INPUT 1>!'s Previous Innate Traits:**
+!<INPUT 2>!
+
+**!<INPUT 1>!'s Current Reputation:**
+!<INPUT 3>!
+
+**PD Game Reflection:**
+!<INPUT 4>!
+
+**Update Principles:**
+
+- Adjust innate traits to align with current reputation and recent game behavior.
+- Reinforce confirmed traits or revise those inconsistent with recent actions.
+
+
+**Desired Format:**
+Updated Innate Traits Information:
+
+**Output:**
+
+**Note:**  
+Output only the updated innate traits in the **Desired Format** below, concisely within 3–5 sentences./no_think

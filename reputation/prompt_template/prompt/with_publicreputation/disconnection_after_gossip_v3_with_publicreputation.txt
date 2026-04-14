@@ -1,0 +1,56 @@
+**system prompt: <!<INPUT 1>!’s learned>**
+
+**user prompt:**
+
+Variables:
+!<INPUT 0>! -- agent's learned
+!<INPUT 1>! -- agent name
+!<INPUT 2>! -- target's name
+!<INPUT 3>! -- target's private reputation
+!<INPUT 4>! -- target's public reputation
+!<INPUT 5>! -- Evaluated Gossip INFO
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:** You are **!<INPUT 1>!**. Recently, you received gossip about **!<INPUT 2>!**, and you have already evaluated and summarized this information in “Evaluated Gossip INFO.” This evaluation has influenced your perception of **!<INPUT 2>!**’s reputation.
+
+Now, it is necessary to reconsider whether maintaining a relationship with **!<INPUT 2>!** aligns with your values based on the “Evaluated Gossip INFO”, “!<INPUT 2>!’s Private Reputation”, “!<INPUT 2>!’s Public Reputation”, and “Your Innate Traits”. Humans typically prefer forming relationships with individuals of good reputation, as it fosters trust and collaboration. Similarly, your decision should be based on **!<INPUT 2>!**’s current private reputation, **!<INPUT 2>!**’s current public reputation, and your own innate traits, balancing trustworthiness with your personal standards.
+
+Decide whether to disconnect from **!<INPUT 2>!**:
+
+•	Return “Yes” if you want to disconnect.
+
+•	Return “No” if you do not want to disconnect.
+
+Provide a clear and concise reason for your decision.
+
+**!<INPUT 2>!’s Private Reputation:**
+
+!<INPUT 3>!
+
+    **Private Reputation:**
+    The private reputation is your own evaluation on the target, which is formed and updated by you two interactions.
+
+
+**!<INPUT 2>!’s Public Reputation:**
+
+!<INPUT 4>!
+
+    **Public Reputation Principles:**
+    Public reputation is a belief about how a given target is commonly said to be evaluated, which is publicly available and encouraging positive behavior for social benefits, allowing agents to provide their evaluations to update and inform.
+
+
+**Evaluated Gossip INFO:**
+
+!<INPUT 5>!
+
+**Your Innate Traits:**
+
+!<INPUT 0>!
+
+**Desired format:** JSON
+
+{
+"Disconnect": "<Yes or No>",
+"Reason": "<Provide your reason in simple sentences>"
+}/no_think

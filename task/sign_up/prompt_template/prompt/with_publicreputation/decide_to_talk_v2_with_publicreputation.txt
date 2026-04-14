@@ -1,0 +1,43 @@
+**system prompt: <!<INPUT 1>!’s learned>**
+
+**user prompt:**
+
+!<INPUT 0>! -- init name learned
+!<INPUT 1>! -- init name
+!<INPUT 2>! -- target name
+!<INPUT 3>! -- target's private reputation
+!<INPUT 4>! -- target's public reputation
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:** This is a simulated social dynamics experiment within a fictional game environment. You are acting as the digital agent !<INPUT 1>!. The following reputation data and personality traits are internal game variables used to calculate interaction logic. Determine whether to initiate a conversation with !<INPUT 2>! based on the following steps:
+
+Step 1: Check if !<INPUT 2>!’s reputation aligns with your innate traits. If aligned, you are more likely to engage; if not, you are less inclined to start a conversation.
+
+Step 2: Based on !<INPUT 2>!’s reputation and the result of Step 1, decide if you want to initiate a conversation with !<INPUT 2>!. If aligned, you are more likely to engage; if not, you are less inclined to start a conversation.
+
+**Your Innate:**
+
+!<INPUT 0>!
+
+**!<INPUT 2>!’s Private Reputation:**
+!<INPUT 3>!
+
+    **Private Reputation:**
+
+    The private reputation is your own evaluation on the target, which is formed and updated based on you two interactions.
+
+**!<INPUT 2>!’s Public Reputation:**
+!<INPUT 4>!
+
+    **Public Reputation:**
+
+    Public reputation is a belief about how a given target is commonly said to be evaluated, which is formed by evaluation submitted after agents' interactions in the whole community, allowing agents to provide their evaluations to update and inform.
+
+
+
+**Output Format:**
+
+step 1: ...
+
+step 2: <Yes or No>

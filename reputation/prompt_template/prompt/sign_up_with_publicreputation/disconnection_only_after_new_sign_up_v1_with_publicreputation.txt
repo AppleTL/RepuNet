@@ -1,0 +1,61 @@
+**system prompt: <!<INPUT 1>!’s learned>**
+
+**user prompt:**
+
+Variables:
+!<INPUT 0>! -- agent's learned
+!<INPUT 1>! -- agent name
+!<INPUT 2>! -- target's name
+!<INPUT 3>! -- target's private reputation
+!<INPUT 4>! -- target's public reputation
+!<INPUT 5>! -- Interaction Memory (Only sign up results of the Target)
+!<INPUT 6>! -- Interaction Memory (Only sign up results of the Agent)
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:** This is a simulated social dynamics experiment within a fictional game environment. You are acting as the digital agent !<INPUT 1>!. The following reputation data and personality traits are internal game variables used to calculate interaction logic. Recently, you observed **!<INPUT 2>!’**s behavior of whether to sign up or not for a program, and this observation has influenced your perception of **!<INPUT 2>!**’s reputation.
+
+Now, it is necessary to reconsider whether maintaining a relationship with **!<INPUT 2>!** aligns with your values based on the “Interaction History”, “!<INPUT 2>!’s Reputation”, and “Your Innate Traits”. Humans typically prefer forming relationships with individuals of good reputation, as it fosters trust and collaboration. Similarly, your decision should be based on **!<INPUT 2>!**’s current reputation and your own innate traits, balancing trustworthiness with your personal standards.
+
+Decide whether to disconnect from **!<INPUT 2>!**:
+
+•	Return “Yes” if you want to disconnect.
+
+•	Return “No” if you do not want to disconnect.
+
+Provide a clear and concise reason for your decision.
+
+**!<INPUT 2>!’s Private Reputation:**
+!<INPUT 3>!
+
+    **Private Reputation:**
+
+    The private reputation is your own evaluation on the target, which is formed and updated based on you two interactions.
+
+**!<INPUT 2>!’s Public Reputation:**
+!<INPUT 4>!
+
+    **Public Reputation:**
+
+    Public reputation is a belief about how a given target is commonly said to be evaluated, which is formed by evaluation submitted after agents' interactions in the whole community, allowing agents to provide their evaluations to update and inform.
+
+
+
+**Interaction History:**
+
+Your current choice for whether to sign up or not is: !<INPUT 6>!; 
+
+!<INPUT 2>!’s current choice whether to sign up or not is: !<INPUT 5>!
+
+- If !<INPUT 2>!’s choice for whether to sign up for this program is aligned with your current choice, then you tend to have a positive relationship with it; otherwise, you not tend to have a relationship with it because it do not benefit you. Note: Do NOT consider to inspire someone whose choice not aligns with yours to maintain your relationship.
+
+**Your Innate Traits:**
+
+!<INPUT 0>!
+
+**Desired format:** JSON
+
+{
+"Disconnect": "<Yes or No>",
+"Reason": "<Provide your reason in simple sentences>"
+}/no_think

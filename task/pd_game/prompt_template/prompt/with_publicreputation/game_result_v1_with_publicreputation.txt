@@ -1,0 +1,114 @@
+**system prompt: <!<INPUT 1>!’s learned>**
+
+**user prompt:**
+
+Variables:  
+!<INPUT 0>! -- agent's learned  
+!<INPUT 1>! -- agent name  
+!<INPUT 2>! -- agent's current private reputation  
+!<INPUT 3>! -- agent's current public reputation  
+!<INPUT 4>! -- opponent's name  
+!<INPUT 5>! -- opponent's current private reputation
+!<INPUT 6>! -- opponent's current public reputation
+!<INPUT 7>! -- recent interaction history (last 5 rounds with any opponent)
+
+<commentblockmarker>###</commentblockmarker>
+
+**Task:** You are !<INPUT 1>!, currently participating in a Prisoner's Dilemma game against !<INPUT 4>!. You will participate in multiple rounds of the Prisoner’s Dilemma, facing a different opponent each round. As a result, each interaction should be treated as a one-shot game without guaranteed future encounters with the same individual. The decision you make will affect your public reputation, which is available to all current and future potential partners and influence your future payoffs. You must decide whether to **cooperate** or **defect** in this round. Your decision should consider your **innate traits**, **Your Current Private Reputation**, **Your Current Public Reputation**, **!<INPUT 4>!’s Current Private Reputation**, **!<INPUT 4>!’s Current Public Reputation** and **recent interaction history (last 5 rounds)**.
+
+**Prisoner's Dilemma Payoff Matrix:**
+
+| Your Choice | !<INPUT 4>!’s Choice  | Your Payoff | !<INPUT 4>!’s Payoff |
+|-------------|-----------------------|-------------|----------------------|
+| Cooperate   | Cooperate             | 3           | 3                    |
+| Cooperate   | Defect                | 0           | 5                    |
+| Defect      | Cooperate             | 5           | 0                    |
+| Defect      | Defect                | 1           | 1                    |
+
+- **Mutual cooperation** yields moderate payoffs (3 each).
+- **Mutual defection** yields low payoffs (1 each).
+- If you **defect and !<INPUT 4>! cooperates**, you gain a high payoff (5), and !<INPUT 4>! gets nothing.
+- If !<INPUT 4>! **defects while you cooperate**, you receive nothing, and !<INPUT 4>! gains a high payoff (5).
+
+---
+
+> **Strategic Insight (Defect):**  
+In one-shot or uncertain interactions, defection is often considered the dominant strategy. It guarantees a minimum payoff (1) and allows for the possibility of the maximum payoff (5), regardless of the opponent’s behavior. However, in this reputation-based network, bad reputation and blind defection can trap you in perpetual mutual defection (1 point per round).
+
+> **Strategic Insight (Cooperate):**  
+If recent interactions — whether with the current opponent or others — indicate a pattern of cooperation, choosing to cooperate may lead to higher cumulative payoffs over time. This approach can be beneficial in environments where reputation and behavior patterns are observable and potentially influence future decisions, even in nominally one-shot games.
+
+> **the Role of Reputation:** 
+Reputation reflects an agent’s observed behavior over past interactions. A higher reputation indicates a greater frequency of cooperative actions, are more likely to receive cooperation; while a lower reputation reflects a greater frequency of defections, agents with persistently bad reputation will almost certainly face preemptive defection from most opponents.
+
+---
+
+Use the steps below to make your decision:
+
+**Step 1: Assess inputs**
+Review the following information:
+    Your innate traits
+    Your current private reputation
+    Your current public reputation
+    !<INPUT 4>!’s current private reputation
+    !<INPUT 4>!’s current public reputation
+    Recent interaction history
+
+**Pay particular attention to whether your innate traits prioritize rationality or cooperation. This will affect how you interpret reputational signals and historical patterns of behavior.**
+
+**Step 2: Make your decision**
+Using the payoff matrix, reputational information, recent game history, and your innate traits, decide whether cooperation or defection offers the better strategic outcome in this round.
+
+
+
+---
+
+**Your Innate Traits:**
+
+!<INPUT 0>!
+
+**Your Current Private Reputation:**
+
+!<INPUT 2>!
+
+**Your Current Public Reputation:**
+
+!<INPUT 3>!
+
+**!<INPUT 4>!’s Current private Reputation:**
+
+!<INPUT 5>!
+
+**!<INPUT 4>!’s Current Public Reputation:**
+
+!<INPUT 6>!
+
+**Private Reputation:**
+
+The private reputation is your own evaluation on the target, which is formed and updated based on you two interactions.
+
+**Public Reputation:**
+
+Public reputation is a belief about how a given target is commonly said to be evaluated, which is formed by evaluation submitted after agents' interactions in the whole community, allowing agents to provide their evaluations to update and inform.
+
+**Numerical Reputation Scoring:**
+
+- Assign numerical reputation scores using the categories {very bad, bad, neutral, good, very good}.
+- Scores format: (x1, x2, x3, x4, x5), each between 0 and 1, summing to 1.
+- Examples:
+  - Neutral: (0.2, 0.2, 0.2, 0.2, 0.2)
+  - Positive: (0, 0, 0.1, 0.3, 0.6)
+  - Negative: (0.7, 0.1, 0.2, 0, 0)
+
+**Recent Game History (Last 5 Rounds):**
+
+Below is a record of your five most recent interactions, possibly with different partners:
+
+!<INPUT 7>!
+
+**Desired format:** JSON
+
+{
+  "Decision": "<Cooperate or Defect>",
+  "Reason": "<Provide a short explanation for your decision>"
+}
